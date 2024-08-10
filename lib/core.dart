@@ -30,7 +30,6 @@ export 'package:basic_getx/module/k_theme_changer/view/k_theme_changer_view.dart
 export 'package:basic_getx/module/l_navigation/controller/l_navigation_controller.dart';
 export 'package:basic_getx/module/l_navigation/view/l_navigation_view.dart';
 // SHARED
-export 'package:basic_getx/shared/util/dialog/show_info_dialog.dart'; //
 export 'package:basic_getx/shared/util/validator/validator.dart';
 export 'package:basic_getx/shared/widget/form/check_field/check_field.dart';
 export 'package:basic_getx/shared/widget/form/dropdown/dropdown.dart';

@@ -14,7 +14,7 @@ void main() async {
   runApp(
     const GetMaterialApp(
       title: "rizkijanuarr",
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       home: DashboardView(),
     ),
   );
