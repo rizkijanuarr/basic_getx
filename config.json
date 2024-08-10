@@ -1,0 +1,26 @@
+{
+    "modules": [
+        "dashboard",
+        "a_counter",
+        "b_single_selection",
+        "c_multiple_selection",
+        "d_cart",
+        "e_animation",
+        "f_timer",
+        "g_enabled_disabled",
+        "h_http_request_loading",
+        "i_dropdown_remote_datasource",
+        "j_checkfield_remote_datasource",
+        "k_theme_changer",
+        "l_navigation"
+    ],
+    "module_directory_name": "module",
+    "experimental_mode": false,
+    "learning_mode": false,
+    "unfreezed": true,
+    "use_cubit": false,
+    "ignore_core_generator_for_directories": [
+        "lib/model",
+        "lib/models"
+    ]
+}
