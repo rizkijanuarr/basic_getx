@@ -64,7 +64,7 @@ class _QSwitchState extends State<QSwitch> {
                       Expanded(
                         child: Text("${item["label"]}"),
                       ),
-                      Container(
+                      SizedBox(
                         width: 80.0,
                         child: Transform.scale(
                           scale: 0.7,
