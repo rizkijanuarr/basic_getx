@@ -1,0 +1,6 @@
+{
+  "potongtext": {
+    "prefix": "potongtext",
+    "body": "/*\nCUT TEXT \"...\"\nTODO IMPORT KE TEXTSTYLE LANGSUNG YA!\nEXAMPLE : potongText(item[\"label\"]),\n*/\nString potongText(String text, {int maxLength = 8}) {\nif (text.length <= maxLength) {\nreturn text;\n} else {\nreturn text.substring(0, maxLength) + '...';\n}\n}"
+  }
+}

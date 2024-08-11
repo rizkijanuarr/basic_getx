@@ -22,6 +22,40 @@ class BSingleSelectionView extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: [
+                  // HORIZONTAL SCROLL SINGLE SELECTION
+                  SizedBox(
+                    height: 60.0,
+                    child: ListView.builder(
+                      itemCount: controller.names.length,
+                      scrollDirection: Axis.horizontal,
+                      padding: EdgeInsets.zero,
+                      clipBehavior: Clip.none,
+                      itemBuilder: (context, index) {
+                        var item = controller.names[index]; // data
+                        bool selected =
+                            controller.selectedIndex == index; // selected warna
+                        return Card(
+                          color: selected ? Colors.redAccent : Colors.white,
+                          child: SizedBox(
+                            width: 100.0,
+                            child: ListTile(
+                              onTap: () => controller.updateIndex(index),
+                              title: Text(
+                                potongText(item),
+                                style: TextStyle(
+                                  color: selected ? Colors.white : Colors.black,
+                                ),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  // VERTICAL SCROLL SINGLE SELECTION
                   ListView.builder(
                     itemCount: controller.names.length,
                     // wajib pake ini ya, dibungkus singlechildscrollview() || Jangan pake expanded lagi atau flexible!!!
@@ -104,5 +138,18 @@ class BSingleSelectionView extends StatelessWidget {
         );
       },
     );
+  }
+
+  /*
+  CUT TEXT "..."
+  TODO IMPORT KE TEXTSTYLE LANGSUNG YA!
+  EXAMPLE : potongText(item["label"]),
+  */
+  String potongText(String text, {int maxLength = 5}) {
+    if (text.length <= maxLength) {
+      return text;
+    } else {
+      return '${text.substring(0, maxLength)}...';
+    }
   }
 }
