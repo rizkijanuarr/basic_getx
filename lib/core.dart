@@ -35,3 +35,7 @@ export 'package:basic_getx/shared/widget/form/check_field/check_field.dart';
 export 'package:basic_getx/shared/widget/form/dropdown/dropdown.dart';
 export 'package:basic_getx/shared/widget/form/switch/switch.dart';
 export 'package:basic_getx/shared/widget/form/textfield/text_field.dart';
+// PLUGIN
+export 'package:highlight/languages/dart.dart';
+export 'package:flutter_code_editor/flutter_code_editor.dart';
+export 'package:flutter_highlight/themes/monokai-sublime.dart';
