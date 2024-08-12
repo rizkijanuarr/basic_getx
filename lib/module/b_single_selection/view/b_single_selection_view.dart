@@ -99,7 +99,7 @@ class BSingleSelectionView extends StatelessWidget {
                         height: 5.0,
                       ),
                       CodeTheme(
-                        data: CodeThemeData(styles: monokaiSublimeTheme),
+                        data: CodeThemeData(styles: shadesOfPurpleTheme),
                         child: SingleChildScrollView(
                           // scrollDirection: Axis.horizontal,
                           child: CodeField(
@@ -121,7 +121,7 @@ class BSingleSelectionView extends StatelessWidget {
                         height: 5.0,
                       ),
                       CodeTheme(
-                        data: CodeThemeData(styles: monokaiSublimeTheme),
+                        data: CodeThemeData(styles: shadesOfPurpleTheme),
                         child: SingleChildScrollView(
                           // scrollDirection: Axis.horizontal,
                           child: CodeField(

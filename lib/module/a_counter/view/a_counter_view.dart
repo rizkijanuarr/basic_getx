@@ -92,7 +92,7 @@ class ACounterView extends StatelessWidget {
                     height: 5.0,
                   ),
                   CodeTheme(
-                    data: CodeThemeData(styles: monokaiSublimeTheme),
+                    data: CodeThemeData(styles: shadesOfPurpleTheme),
                     child: SingleChildScrollView(
                       child: CodeField(
                         controller: controller.viewCode,
@@ -113,7 +113,7 @@ class ACounterView extends StatelessWidget {
                     height: 5.0,
                   ),
                   CodeTheme(
-                    data: CodeThemeData(styles: monokaiSublimeTheme),
+                    data: CodeThemeData(styles: shadesOfPurpleTheme),
                     child: SingleChildScrollView(
                       child: CodeField(
                         controller: controller.viewCode2,

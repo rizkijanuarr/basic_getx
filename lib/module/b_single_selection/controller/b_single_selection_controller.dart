@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 class BSingleSelectionController extends GetxController {
   BSingleSelectionView? view;
 
-  // Pertama kita buat datanya dulu yaa!
+  // #1 - Pertama kita buat datanya dulu yaa!
   List names = [
     "Aan",
     "Citra",
@@ -19,16 +19,18 @@ class BSingleSelectionController extends GetxController {
     "Good game bro dimanapun berada!"
   ];
 
-  // Kedua kita buat warnanya ketika di select ya!
+  // #2 - Kedua kita buat warnanya ketika di select ya!
   int selectedIndex = -1;
   updateIndex(int newIndex) {
     selectedIndex = newIndex;
     update();
   }
 
-  // CONTROLLER
+  // START - TAMPILKAN KODE!
+
+  // #1
   final String con = '''
-  // Pertama kita buat datanya dulu yaa!
+  // #1 - Pertama kita buat datanya dulu yaa!
   List<String> names = [
     "Aan",
     "Citra",
@@ -43,7 +45,7 @@ class BSingleSelectionController extends GetxController {
     "Good game bro dimanapun berada!"
   ];
 
-  // Kedua kita buat warnanya ketika di select ya!
+  // #2 - Kedua kita buat warnanya ketika di select ya!
   int selectedIndex = -1;
   void updateIndex(int newIndex) {
     selectedIndex = newIndex;
@@ -51,8 +53,9 @@ class BSingleSelectionController extends GetxController {
   }
 ''';
 
-// VIEW
+// #2
   final String viu = '''
+// #3 - Tampilkan pada View nya!
 SingleChildScrollView(
   child: ListView.builder(
     itemCount: controller.names.length,
@@ -83,9 +86,11 @@ SingleChildScrollView(
 )
 ''';
 
+  // #3
   late final CodeController conController;
   late final CodeController viuController;
 
+  // #4
   BSingleSelectionController() {
     conController = CodeController(
       text: con,
@@ -99,4 +104,5 @@ SingleChildScrollView(
       namedSectionParser: const BracketsStartEndNamedSectionParser(),
     );
   }
+  // END - TAMPILKAN KODE!
 }

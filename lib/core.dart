@@ -37,5 +37,11 @@ export 'package:basic_getx/shared/widget/form/switch/switch.dart';
 export 'package:basic_getx/shared/widget/form/textfield/text_field.dart';
 // PLUGIN
 export 'package:highlight/languages/dart.dart';
+// CODE EDITOR
 export 'package:flutter_code_editor/flutter_code_editor.dart';
+// THEME OF CODE EDITOR
 export 'package:flutter_highlight/themes/monokai-sublime.dart';
+export 'package:flutter_highlight/themes/androidstudio.dart';
+export 'package:flutter_highlight/themes/gruvbox-dark.dart';
+export 'package:flutter_highlight/themes/atom-one-dark.dart';
+export 'package:flutter_highlight/themes/shades-of-purple.dart';

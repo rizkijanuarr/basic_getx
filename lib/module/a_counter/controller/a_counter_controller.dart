@@ -7,40 +7,40 @@ import 'package:highlight/languages/dart.dart';
 class ACounterController extends GetxController {
   ACounterView? view;
 
-  // LOGIC
-
-  // NON OBSERVABLE
+  // #1 - NON OBSERVABLE
   int counter = 0;
   updateCounter() async {
     counter++;
     update();
   }
 
-  // OBSERVABLE
+  // #2 - OBSERVABLE
   var counter2 = 0.obs;
   updateCounter2() async {
     counter2.value++;
   }
 
-  // LOGIC
+  // START - TAMPILKAN KODE!
 
-  // DITAMPILKAN
+  // #1
   final String sampleCode = '''
-// NON OBSERVABLE
+// #1 - NON OBSERVABLE
   int counter = 10;
   updateCounter() async {
     counter++;
     update();
   }
 
-  // OBSERVABLE
+  // #2 - OBSERVABLE
   var counter2 = 10.obs;
   updateCounter2() async {
     counter2.value++;
   }
 ''';
 
+// #2
   final String sampleViewCode = '''
+#3 - Tampilkan pada View nya!
 Center(
   child: Column(
     children: [
@@ -96,9 +96,11 @@ Center(
 ),
 ''';
 
+  // #3
   late final CodeController viewCode;
   late final CodeController viewCode2;
 
+  // #4
   ACounterController() {
     viewCode = CodeController(
       text: sampleCode,
@@ -113,5 +115,5 @@ Center(
     );
   }
 
-  // DITAMPILKAN
+  // END - TAMPILKAN KODE!
 }
