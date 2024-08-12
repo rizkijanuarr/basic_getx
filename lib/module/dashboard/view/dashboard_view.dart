@@ -24,7 +24,7 @@ class DashboardView extends StatelessWidget {
               elevation: 0.0,
               titleTextStyle: const TextStyle(
                 color: Colors.black,
-                fontSize: 16.0,
+                fontSize: 14.0,
                 fontWeight: FontWeight.bold,
               ),
               iconTheme: const IconThemeData(
@@ -35,7 +35,7 @@ class DashboardView extends StatelessWidget {
           child: Scaffold(
             appBar: AppBar(
               title: const Text(
-                  "Mengenal lebih dekat dengan Get X\nWrite less do more!🚀"),
+                  "Mengenal lebih dekat dengan Get X\nWrite less do more!🚀\nIkatlah ilmu dengan menulis - (Ali Bin Abi Thalib)"),
             ),
             body: SingleChildScrollView(
               child: Container(
