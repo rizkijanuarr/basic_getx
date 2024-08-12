@@ -90,7 +90,6 @@ export 'package:flutter_highlight/themes/gml.dart';
 export 'package:flutter_highlight/themes/googlecode.dart';
 export 'package:flutter_highlight/themes/gradient-dark.dart';
 export 'package:flutter_highlight/themes/grayscale.dart';
-export 'package:flutter_highlight/themes/gruvbox-dark.dart';
 export 'package:flutter_highlight/themes/gruvbox-light.dart';
 export 'package:flutter_highlight/themes/hopscotch.dart';
 export 'package:flutter_highlight/themes/hybrid.dart';
