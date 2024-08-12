@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import '../controller/a_counter_controller.dart';
 import 'package:basic_getx/core.dart';
 import 'package:get/get.dart';
-import 'package:flutter_code_editor/flutter_code_editor.dart';
-import 'package:flutter_highlight/themes/monokai-sublime.dart';
 
 class ACounterView extends StatelessWidget {
   const ACounterView({super.key});
