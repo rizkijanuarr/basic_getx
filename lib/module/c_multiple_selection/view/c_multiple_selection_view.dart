@@ -258,12 +258,19 @@ class CMultipleSelectionView extends StatelessWidget {
                       const SizedBox(
                         height: 5.0,
                       ),
-                      CodeTheme(
-                        data: CodeThemeData(styles: shadesOfPurpleTheme),
-                        child: SingleChildScrollView(
-                          // scrollDirection: Axis.horizontal,
-                          child: CodeField(
-                            controller: controller.dataController,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0),
+                        child: CodeTheme(
+                          data: CodeThemeData(styles: xt256Theme),
+                          child: SingleChildScrollView(
+                            child: CodeField(
+                              controller: controller.dataController,
+                              gutterStyle: const GutterStyle(
+                                showErrors: false,
+                                showFoldingHandles: true,
+                                showLineNumbers: false,
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -280,12 +287,19 @@ class CMultipleSelectionView extends StatelessWidget {
                       const SizedBox(
                         height: 5.0,
                       ),
-                      CodeTheme(
-                        data: CodeThemeData(styles: shadesOfPurpleTheme),
-                        child: SingleChildScrollView(
-                          // scrollDirection: Axis.horizontal,
-                          child: CodeField(
-                            controller: controller.vieewController,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0),
+                        child: CodeTheme(
+                          data: CodeThemeData(styles: xt256Theme),
+                          child: SingleChildScrollView(
+                            child: CodeField(
+                              controller: controller.vieewController,
+                              gutterStyle: const GutterStyle(
+                                showErrors: false,
+                                showFoldingHandles: true,
+                                showLineNumbers: false,
+                              ),
+                            ),
                           ),
                         ),
                       ),

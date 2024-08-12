@@ -1,10 +1,11 @@
 import 'package:basic_getx/core.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BSingleSelectionController extends GetxController {
   BSingleSelectionView? view;
 
-  // #1 - Pertama kita buat datanya dulu yaa!
+  // #1
   List names = [
     "Aan",
     "Citra",
@@ -19,7 +20,7 @@ class BSingleSelectionController extends GetxController {
     "Good game bro dimanapun berada!"
   ];
 
-  // #2 - Kedua kita buat warnanya ketika di select ya!
+  // #2
   int selectedIndex = -1;
   updateIndex(int newIndex) {
     selectedIndex = newIndex;
@@ -30,8 +31,8 @@ class BSingleSelectionController extends GetxController {
 
   // #1
   final String con = '''
-  // #1 - Pertama kita buat datanya dulu yaa!
-  List<String> names = [
+  #1
+  List<String> names = [ // FoldStart: section1
     "Aan",
     "Citra",
     "Lestari",
@@ -43,20 +44,20 @@ class BSingleSelectionController extends GetxController {
     "Haryadi",
     "Kaleann semua keren!",
     "Good game bro dimanapun berada!"
-  ];
+  ]; // FoldEnd: section1
 
-  // #2 - Kedua kita buat warnanya ketika di select ya!
+  #2
   int selectedIndex = -1;
-  void updateIndex(int newIndex) {
+  void updateIndex(int newIndex) { // FoldStart: section1
     selectedIndex = newIndex;
     update();
-  }
+  } // FoldEnd: section1
 ''';
 
 // #2
   final String viu = '''
-// #3 - Tampilkan pada View nya!
-SingleChildScrollView(
+#3
+SingleChildScrollView( // FoldStart: section1
   child: ListView.builder(
     itemCount: controller.names.length,
     // wajib pake ini ya, dibungkus singlechildscrollview() || Jangan pake expanded lagi atau flexible!!!
@@ -83,7 +84,7 @@ SingleChildScrollView(
       );
     },
   ),
-)
+) // FoldEnd: section1
 ''';
 
   // #3
@@ -103,6 +104,12 @@ SingleChildScrollView(
       language: dart,
       namedSectionParser: const BracketsStartEndNamedSectionParser(),
     );
+
+    // Fold otomatis
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      conController.foldOutsideSections(['section1']);
+      viuController.foldOutsideSections(['section1']);
+    });
   }
   // END - TAMPILKAN KODE!
 }

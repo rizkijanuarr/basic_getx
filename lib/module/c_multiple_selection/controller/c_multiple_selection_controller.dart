@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class CMultipleSelectionController extends GetxController {
   CMultipleSelectionView? view;
 
-  // #1 - Pertama kita buat datanya dulu yaa!
+  // #1 - Data Dummy
   List<Map<String, dynamic>> names = [
     {"label": "Aan", "value": "Aan", "selected": false},
     {"label": "Citra", "value": "Citra", "selected": false},
@@ -28,7 +28,7 @@ class CMultipleSelectionController extends GetxController {
     }
   ];
 
-  // #2 - Kedua kita buat warnanya ketika di select ya!
+  // #2 - Selected
   updateIndex(int newIndex) {
     if (names[newIndex]["selected"] == true) {
       names[newIndex]["selected"] = false;
@@ -38,12 +38,12 @@ class CMultipleSelectionController extends GetxController {
     update();
   }
 
-  // #3 - Ambil datanya
+// #3 - Get Data selected == true menjadi list
   List getValues() {
     return names.where((i) => i["selected"] == true).toList();
   }
 
-  // #4 - Ambil variable yang sudah ditangkap di langkah #3 dan tampilkan di langkah #4
+  // #4 - save data getValues()
   doSave() {
     var selectedValues = getValues();
 
@@ -75,8 +75,8 @@ class CMultipleSelectionController extends GetxController {
 
 // #1
   final String data = '''
-  // #1 - Pertama kita buat datanya dulu yaa!
-  List<Map<String, dynamic>> names = [
+  // #1 - Data Dummy
+  List<Map<String, dynamic>> names = [ // FoldStart: section1
     {"label": "Aan", "value": "Aan", "selected": false},
     {"label": "Citra", "value": "Citra", "selected": false},
     {"label": "Lestari", "value": "Lestari", "selected": false},
@@ -96,20 +96,54 @@ class CMultipleSelectionController extends GetxController {
       "value": "Good game bro dimanapun berada!",
       "selected": false,
     }
-  ];
+  ]; // FoldEnd: section1
 
-  // #2 - Kedua kita buat warnanya ketika di select ya!
-  void updateIndex(int newIndex) {
+  // #2 - Selected
+  void updateIndex(int newIndex) { // FoldStart: section1
     names[newIndex]["selected"] = !names[newIndex]["selected"];
     update();
-  }
+  } // FoldEnd: section1
+
+  // #3 - Get Data selected == true menjadi list
+  List getValues() { // FoldStart: section1
+    return names.where((i) => i["selected"] == true).toList();
+  } // FoldEnd: section1
+
+  // #4 - save data getValues()
+  doSave() { // FoldStart: section1
+    var selectedValues = getValues();
+
+    // Tampilkan di console
+    print("#HALAMAN_MULTIPLE_SELECTION : \$selectedValues");
+
+    // Tampilkan di UI melalui dialog
+    Get.dialog(
+      AlertDialog(
+        title: const Text("Result"),
+        content: Text(
+          selectedValues.isNotEmpty
+              ? selectedValues.map((e) => e["label"]).join("\n")
+              : "No values selected.",
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Get.back();
+            },
+            child: const Text("OK"),
+          ),
+        ],
+      ),
+    );
+  } // FoldEnd: section1
 ''';
 
 // #2
   final String vieew = '''
-  // #3 - Tampilkan di View nya, seperti berikut!
-  // Oiya, btw disini saya menerapkan pada Sebuah Card Vertical
-  ListView.builder(
+  // #5 - Tampilkan di View-nya, seperti berikut!
+  // !!! Oiya, btw disini saya menerapkan pada Sebuah Card Vertical
+
+  ListView.builder( // FoldStart: section1
     itemCount: controller.names.length,
     physics: const NeverScrollableScrollPhysics(), // Nonaktifkan scroll ListView
     shrinkWrap: true, // Buat ListView sesuai dengan konten
@@ -132,7 +166,24 @@ class CMultipleSelectionController extends GetxController {
         ),
       );
     },
-  ),
+  ), // FoldEnd: section1
+
+  // #6 - Button - function doSave()
+  SizedBox( // FoldStart: section1
+    width: MediaQuery.of(context).size.width,
+    height: 40.0,
+    child: ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+      ),
+      onPressed: () => controller.doSave(),
+      child: const Text("Save"),
+    ),
+  ), // FoldEnd: section1
 ''';
 
   // #3
@@ -152,6 +203,12 @@ class CMultipleSelectionController extends GetxController {
       language: dart,
       namedSectionParser: const BracketsStartEndNamedSectionParser(),
     );
+
+    // Fold otomatis
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      dataController.foldOutsideSections(['section1']);
+      vieewController.foldOutsideSections(['section1']);
+    });
   }
 // END - TAMPILKAN KODE!
 }

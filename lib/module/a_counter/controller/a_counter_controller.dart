@@ -1,4 +1,5 @@
 import 'package:basic_getx/core.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_code_editor/flutter_code_editor.dart';
 import 'package:get/get.dart';
 import '../view/a_counter_view.dart';
@@ -24,24 +25,26 @@ class ACounterController extends GetxController {
 
   // #1
   final String sampleCode = '''
-// #1 - NON OBSERVABLE
+#1 - NON OBSERVABLE
+
   int counter = 10;
-  updateCounter() async {
+  updateCounter() async { // FoldStart: section1
     counter++;
     update();
   }
 
-  // #2 - OBSERVABLE
+#2 - OBSERVABLE
+
   var counter2 = 10.obs;
-  updateCounter2() async {
+  updateCounter2() async { // FoldStart: section1
     counter2.value++;
   }
 ''';
 
 // #2
   final String sampleViewCode = '''
-#3 - Tampilkan pada View nya!
-Center(
+#3
+Center( // FoldStart: section1
   child: Column(
     children: [
       Text(
@@ -93,7 +96,7 @@ Center(
       ),
     ],
   ),
-),
+), // FoldEnd: section1
 ''';
 
   // #3
@@ -113,6 +116,12 @@ Center(
       language: dart,
       namedSectionParser: const BracketsStartEndNamedSectionParser(),
     );
+
+    // Fold otomatis
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      viewCode.foldOutsideSections(['section1']);
+      viewCode2.foldOutsideSections(['section1']);
+    });
   }
 
   // END - TAMPILKAN KODE!

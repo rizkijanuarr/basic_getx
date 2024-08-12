@@ -88,11 +88,19 @@ class ACounterView extends StatelessWidget {
                   const SizedBox(
                     height: 5.0,
                   ),
-                  CodeTheme(
-                    data: CodeThemeData(styles: shadesOfPurpleTheme),
-                    child: SingleChildScrollView(
-                      child: CodeField(
-                        controller: controller.viewCode,
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(12.0),
+                    child: CodeTheme(
+                      data: CodeThemeData(styles: xt256Theme),
+                      child: SingleChildScrollView(
+                        child: CodeField(
+                          controller: controller.viewCode,
+                          gutterStyle: const GutterStyle(
+                            showErrors: false,
+                            showFoldingHandles: true,
+                            showLineNumbers: false,
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -109,11 +117,19 @@ class ACounterView extends StatelessWidget {
                   const SizedBox(
                     height: 5.0,
                   ),
-                  CodeTheme(
-                    data: CodeThemeData(styles: shadesOfPurpleTheme),
-                    child: SingleChildScrollView(
-                      child: CodeField(
-                        controller: controller.viewCode2,
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(12.0),
+                    child: CodeTheme(
+                      data: CodeThemeData(styles: xt256Theme),
+                      child: SingleChildScrollView(
+                        child: CodeField(
+                          controller: controller.viewCode2,
+                          gutterStyle: const GutterStyle(
+                            showErrors: false,
+                            showFoldingHandles: true,
+                            showLineNumbers: false,
+                          ),
+                        ),
                       ),
                     ),
                   ),
