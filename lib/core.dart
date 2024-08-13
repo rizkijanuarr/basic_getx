@@ -130,3 +130,5 @@ export 'package:flutter_highlight/themes/vs2015.dart';
 export 'package:flutter_highlight/themes/xcode.dart';
 export 'package:flutter_highlight/themes/xt256.dart';
 export 'package:flutter_highlight/themes/zenburn.dart';
+// PLUGINS CONSTRAINTS LAYOUT
+export 'package:flutter_constraintlayout/flutter_constraintlayout.dart';

@@ -20,8 +20,16 @@ class FTimerView extends StatelessWidget {
           body: SingleChildScrollView(
             child: Container(
               padding: const EdgeInsets.all(10.0),
-              child: const Column(
-                children: [],
+              child: Column(
+                children: [
+                  Text(
+                    controller.time,
+                    style: const TextStyle(
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
