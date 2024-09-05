@@ -11,8 +11,9 @@
         "h_http_request_loading",
         "i_dropdown_remote_datasource",
         "j_checkfield_remote_datasource",
-        "k_theme_changer",
-        "l_navigation"
+        "k_map_remote_datasource",
+        "l_theme_changer",
+        "m_navigation"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,
