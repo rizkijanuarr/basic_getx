@@ -49,7 +49,7 @@ class DashboardView extends StatelessWidget {
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: Text(
-                        "© 2024 ikyy.dev",
+                        "2024 | rizkijanuar.com",
                         style: TextStyle(
                           fontSize: 12.0,
                           fontWeight: FontWeight.bold,

@@ -45,12 +45,6 @@ class DashboardMenu extends StatelessWidget {
         "page": const KMapRemoteDatasourceView(),
         "icon": "☀️"
       },
-      {
-        "label": "L. Theme Changer",
-        "page": const LThemeChangerView(),
-        "icon": "☀️"
-      },
-      {"label": "m. Navigation", "page": const MNavigationView(), "icon": "☀️"},
     ];
     return GridView.builder(
       padding: EdgeInsets.zero,

@@ -28,10 +28,6 @@ export 'package:basic_getx/module/j_checkfield_remote_datasource/controller/j_ch
 export 'package:basic_getx/module/j_checkfield_remote_datasource/view/j_checkfield_remote_datasource_view.dart';
 export 'package:basic_getx/module/k_map_remote_datasource/controller/k_map_remote_datasource_controller.dart';
 export 'package:basic_getx/module/k_map_remote_datasource/view/k_map_remote_datasource_view.dart';
-export 'package:basic_getx/module/l_theme_changer/controller/l_theme_changer_controller.dart';
-export 'package:basic_getx/module/l_theme_changer/view/l_theme_changer_view.dart';
-export 'package:basic_getx/module/m_navigation/controller/m_navigation_controller.dart';
-export 'package:basic_getx/module/m_navigation/view/m_navigation_view.dart';
 export 'package:basic_getx/shared/util/validator/validator.dart';
 export 'package:basic_getx/shared/widget/form/check_field/check_field.dart';
 export 'package:basic_getx/shared/widget/form/dropdown/dropdown.dart';
