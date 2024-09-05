@@ -29,6 +29,61 @@ class FTimerView extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "Controller :",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0),
+                        child: CodeTheme(
+                          data: CodeThemeData(styles: xt256Theme),
+                          child: SingleChildScrollView(
+                            child: CodeField(
+                              controller: controller.datazController,
+                              gutterStyle: const GutterStyle(
+                                showErrors: false,
+                                showFoldingHandles: true,
+                                showLineNumbers: false,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      //
+                      const SizedBox(
+                        height: 10.0,
+                      ),
+                      const Text(
+                        "View :",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0),
+                        child: CodeTheme(
+                          data: CodeThemeData(styles: xt256Theme),
+                          child: SingleChildScrollView(
+                            child: CodeField(
+                              controller: controller.vieewController,
+                              gutterStyle: const GutterStyle(
+                                showErrors: false,
+                                showFoldingHandles: true,
+                                showLineNumbers: false,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),

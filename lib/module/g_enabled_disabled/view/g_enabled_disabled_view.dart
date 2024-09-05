@@ -20,8 +20,99 @@ class GEnabledDisabledView extends StatelessWidget {
           body: SingleChildScrollView(
             child: Container(
               padding: const EdgeInsets.all(10.0),
-              child: const Column(
-                children: [],
+              child: Column(
+                children: [
+                  QTextField(
+                    label: "Email",
+                    validator: Validator.email,
+                    suffixIcon: Icons.email,
+                    value: null,
+                    onChanged: (value) {
+                      controller.email = value;
+                      controller.update();
+                    },
+                  ),
+                  QTextField(
+                    label: "Password",
+                    obscure: true,
+                    validator: Validator.required,
+                    suffixIcon: Icons.password,
+                    value: null,
+                    onChanged: (value) {
+                      controller.password = value;
+                      controller.update();
+                    },
+                  ),
+                  const Divider(),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                          controller.isValid ? Colors.blueAccent : Colors.grey,
+                      foregroundColor: Colors.white,
+                    ),
+                    onPressed: () {
+                      if (controller.isValid) {
+                        Get.back();
+                      }
+                    },
+                    child: const Text("Save"),
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "Controller :",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0),
+                        child: CodeTheme(
+                          data: CodeThemeData(styles: xt256Theme),
+                          child: SingleChildScrollView(
+                            child: CodeField(
+                              controller: controller.dataxController,
+                              gutterStyle: const GutterStyle(
+                                showErrors: false,
+                                showFoldingHandles: true,
+                                showLineNumbers: false,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      //
+                      const SizedBox(
+                        height: 10.0,
+                      ),
+                      const Text(
+                        "View :",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0),
+                        child: CodeTheme(
+                          data: CodeThemeData(styles: xt256Theme),
+                          child: SingleChildScrollView(
+                            child: CodeField(
+                              controller: controller.vieewController,
+                              gutterStyle: const GutterStyle(
+                                showErrors: false,
+                                showFoldingHandles: true,
+                                showLineNumbers: false,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),

@@ -17,7 +17,6 @@ dependencies:
   flutter_animate: ^4.5.0
   window_manager: ^0.3.7
   flutter_code_editor: ^0.3.2
-  flutter_constraintlayout: ^1.7.0-stable
 dev_dependencies:
   flutter_test:
     sdk: flutter

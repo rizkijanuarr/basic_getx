@@ -5,7 +5,7 @@
       "source.fixAll": "explicit"
     },
     "editor.formatOnType": true,
-    "editor.rulers": [120],
+    "editor.rulers": [70],
     "editor.selectionHighlight": false,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
