@@ -6,4 +6,4 @@
 - [Result](#result)
 
 ## Result
-![Result](../assets/vid/result.gif)
+![Result](https://github.com/rizkijanuarr/basic_getx/blob/master/assets/vid/result.gif?raw=true)
