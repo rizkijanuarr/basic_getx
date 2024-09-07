@@ -6,4 +6,4 @@
 - [Result](#result)
 
 ## Result
-![Result](assets/vid/result.gif)
+![Result](../assets/vid/result.gif)
